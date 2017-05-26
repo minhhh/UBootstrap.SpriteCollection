@@ -2,10 +2,10 @@
 using UnityEditor;
 using System.IO;
 
-namespace UBootstrap
+namespace UBootstrap.Editor
 {
     [CustomEditor (typeof(SpriteCollection))]
-    public class SpriteCollectionUtilities : Editor
+    public class SpriteCollectionEditor : UnityEditor.Editor
     {
         private SerializedProperty folderName, sprites;
 

@@ -27,6 +27,10 @@ To include SpriteCollection into your project, you can use `npm` method of unity
 
 ## Changelog
 
+**0.0.2**
+
+* Fix potential confusing namespace Editor
+
 **0.0.1**
 
 * Initial commit
