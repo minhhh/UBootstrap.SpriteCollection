@@ -15,7 +15,7 @@
     "minimist": "ssh://github.com/substack/minimist.git#0.0.8",
     "mkdirp": "ssh://github.com/substack/node-mkdirp.git#0.5.1",
     "ncp": "ssh://github.com/AvianFlu/ncp.git#v2.0.0",
-    "unity-singleton": "ssh://github.com/minhhh/unity-singleton.git#v0.0.2"
+    "unity-singleton": "ssh://github.com/minhhh/unity-singleton#v0.0.2"
   }
 }
 
