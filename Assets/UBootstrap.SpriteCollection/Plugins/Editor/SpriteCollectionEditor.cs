@@ -7,11 +7,12 @@ namespace UBootstrap.Editor
     [CustomEditor (typeof(SpriteCollection))]
     public class SpriteCollectionEditor : UnityEditor.Editor
     {
-        private SerializedProperty folderName, sprites;
+        private SerializedProperty folderName, texture, sprites;
 
         protected virtual void OnEnable ()
         {
             folderName = serializedObject.FindProperty ("folderName");
+            texture = serializedObject.FindProperty ("texture");
             sprites = serializedObject.FindProperty ("sprites");
         }
 
@@ -23,7 +24,7 @@ namespace UBootstrap.Editor
 
             float reloadWidth = GUI.skin.label.CalcSize (new GUIContent ("Reload")).x + 20;
             if (GUILayout.Button ("Reload", GUILayout.Width (reloadWidth))) {
-                Debug.Log (this.GetType ().Name + "::OnInspectorGUI Load pngs from " + component.folderName);
+//                Debug.Log (this.GetType ().Name + "::OnInspectorGUI Load pngs from " + component.folderName);
                 string[] spritePaths = Directory.GetFiles (Application.dataPath + "/" + component.folderName, "*.png", SearchOption.TopDirectoryOnly);
                 component.sprites.Clear ();
 
@@ -31,12 +32,35 @@ namespace UBootstrap.Editor
                 for (int i = 0; i < spritePaths.Length; i++) {
                     var index = spritePaths [i].IndexOf ("/Assets") + 1;
                     spritePath = spritePaths [i].Substring (index);
-                    var sprite = AssetDatabase.LoadAssetAtPath<Sprite> (spritePath);
-                    component.sprites.Add (sprite);
+                    var items = AssetDatabase.LoadAllAssetsAtPath (spritePath);
+                    foreach (var item in items) {
+                        if (item is Sprite) {
+                            component.sprites.Add ((Sprite)item);
+                        }
+                    }
+
                 }
             }
 
             EditorGUILayout.EndHorizontal ();
+
+            EditorGUILayout.BeginHorizontal ();
+            EditorGUILayout.PropertyField (texture);
+            if (GUILayout.Button ("Reload", GUILayout.Width (reloadWidth))) {
+                component.sprites.Clear ();
+                string spritePath = AssetDatabase.GetAssetPath (component.texture);
+                var index = spritePath.IndexOf ("/Assets") + 1;
+                spritePath = spritePath.Substring (index);
+                var items = AssetDatabase.LoadAllAssetsAtPath (spritePath);
+                foreach (var item in items) {
+                    if (item is Sprite) {
+                        component.sprites.Add ((Sprite)item);
+                    }
+                }
+
+            }
+            EditorGUILayout.EndHorizontal ();
+
             EditorGUILayout.PropertyField (sprites, true);
             serializedObject.ApplyModifiedProperties ();
         }

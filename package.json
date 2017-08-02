@@ -1,6 +1,6 @@
 {
   "name": "UBootstrap.SpriteCollection",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "SpriteCollection is a convenient way to load sprites dynamically in Unity",
   "main": "index.js",
   "files": [

@@ -108,6 +108,64 @@ NavMeshSettings:
     tileSize: 256
     accuratePlacement: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &29739837
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 114360367081809452, guid: 58354d998f6574264bdd108dbe5cac29,
+        type: 2}
+      propertyPath: sprites.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4179907247295020, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360367081809452, guid: 58354d998f6574264bdd108dbe5cac29,
+        type: 2}
+      propertyPath: texture
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 114360367081809452, guid: 58354d998f6574264bdd108dbe5cac29,
+        type: 2}
+      propertyPath: sprites.Array.data[0]
+      value: 
+      objectReference: {fileID: 21300000, guid: 1485756e68e1f8646aa4150118b79dac,
+        type: 3}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 58354d998f6574264bdd108dbe5cac29, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &272518276
 GameObject:
   m_ObjectHideFlags: 0

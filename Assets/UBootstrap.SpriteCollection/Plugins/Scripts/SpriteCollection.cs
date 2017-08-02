@@ -9,6 +9,7 @@ namespace UBootstrap
         public List<Sprite> sprites = new List<Sprite> ();
         public string collectionName;
         public string folderName;
+        public Texture2D texture;
 
         void Awake ()
         {

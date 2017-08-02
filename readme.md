@@ -27,6 +27,11 @@ To include SpriteCollection into your project, you can use `npm` method of unity
 
 ## Changelog
 
+**0.0.3**
+
+* Add support for multiple sprites in a texture.
+* Add supprot for a single texture
+
 **0.0.2**
 
 * Fix potential confusing namespace Editor
