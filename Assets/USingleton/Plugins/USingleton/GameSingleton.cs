@@ -21,7 +21,7 @@ namespace USingleton
         public static T CreateInstance ()
         {
             if (instance != null) {
-                Assert.IsNull (instance, "Instance is not null. Please call CreateInstance once only");
+                // Instance is not null. Please call CreateInstance once only!!!
                 return instance;
             }
 

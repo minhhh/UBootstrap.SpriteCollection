@@ -16,9 +16,9 @@ minimist@0.0.8, "minimist@ssh://github.com/substack/minimist.git#0.0.8":
   version "2.0.0"
   resolved "ssh://github.com/AvianFlu/ncp.git#93c7c6c719e2a4944dc09a16178b09aef428cdf0"
 
-"unity-singleton@ssh://github.com/minhhh/unity-singleton.git#v0.0.2":
-  version "0.0.2"
-  resolved "ssh://github.com/minhhh/unity-singleton.git#4c9b467dd0cd0aeca45685c35865cd68947b2339"
+"unity-singleton@ssh://github.com/minhhh/unity-singleton#v0.0.3":
+  version "0.0.3"
+  resolved "ssh://github.com/minhhh/unity-singleton#5ede85a7584e09e91f7f641d1a2a49629a14846a"
   dependencies:
     minimist "ssh://github.com/substack/minimist.git#0.0.8"
     mkdirp "ssh://github.com/substack/node-mkdirp.git#0.5.1"

@@ -11,15 +11,15 @@ namespace UBootstrap
         public string folderName;
         public Texture2D texture;
 
-        void Awake ()
+        protected virtual void Awake ()
         {
         }
 
-        void OnDestroy ()
+        protected virtual void OnDestroy ()
         {
         }
 
-        public Sprite GetSprite (int index)
+        public virtual Sprite GetSprite (int index)
         {
             if (index >= 0 && index < sprites.Count) {
                 return sprites [index];
@@ -28,7 +28,7 @@ namespace UBootstrap
             return null;
         }
 
-        public Sprite GetSprite (string spriteName)
+        public virtual Sprite GetSprite (string spriteName)
         {
             foreach (Sprite sprite in sprites) {
                 if (sprite != null && sprite.name == spriteName) {
